@@ -4,22 +4,21 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "SnakeBase.generated.h"
+#include "SnakeElementBase.generated.h"
 
-class ASnakeElementBase;
+class UStaticMeshComponent;
 
 UCLASS()
-class SNAKE_API ASnakeBase : public AActor
+class SNAKE_API ASnakeElementBase : public AActor
 {
 	GENERATED_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
-	ASnakeBase();
+	ASnakeElementBase();
 
-	UPROPERTY(EditDefaultsOnly)
-	TSubclassOf<ASnakeElementBase> SnakeElementClass;
-
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	UStaticMeshComponent* MeshComponent;
 
 protected:
 	// Called when the game starts or when spawned
