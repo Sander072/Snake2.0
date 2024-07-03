@@ -10,7 +10,7 @@ ASnakeBase::ASnakeBase()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	ElementSize = 100.0f;
-	MovementSpeed = 0.5f;
+	MovementSpeed = 1.0f;
 	LastMovementDirection = EMovementDirection::DOWN;
 
 }
